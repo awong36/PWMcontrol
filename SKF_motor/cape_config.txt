@@ -1,0 +1,17 @@
+nano /etc/default/capemgr
+
+am33xx_pwm,bone_pwm_P9_14,bone_pwm_P8_13,cape-univ-audio
+
+
+nano ~/.profile
+
+export SLOTS=/sys/devices/bone_capemgr.9/slots
+export PINS=/sys/kernel/debug/pinctrl/44e10800.pinmux/pins
+export PINMUX=/sys/kernel/debug/pinctrl/44e10800.pinmux
+export GPIO=/sys/class/gpio
+
+crontab -e 
+
+@reboot source ~/.profile
+
+dtc -O dtb -o /lib/firmware/cape-univ-audio-00A0.dtbo -b 0 -@ /lib/firmware/cape-univ-audio-00A0.dts

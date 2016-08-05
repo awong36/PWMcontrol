@@ -1,0 +1,26 @@
+(P9 pinout) 
+restTime = 8  #seconds
+timeout = 25 #seconds
+
+upDIR = "P9_15"
+downDIR = "P9_12"
+upperSW = "P9_25"
+lowerSW = "P9_28"
+
+pwmPIN = "P9_14"
+freq = 10000
+duty = 100
+
+(P8 pinout)
+restTime = 8  # seconds
+timeout = 25  # seconds
+
+upDIR = "P8_17"
+downDIR = "P8_15"
+upperSW = "P9_29"
+lowerSW = "P9_31"
+
+pwmPIN = "P8_13"
+
+freq = 10000
+duty = 100
